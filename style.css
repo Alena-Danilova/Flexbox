@@ -1,0 +1,483 @@
+/* Обнуление стилей  */
+/* --------------------------------------------- */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* Стили страницы */
+/* --------------------------------------------- */
+/* 'hi' section */
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden; /* Не чего не выходит за экран */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+  /* Прижимает footer к низу */
+}
+
+.hi {
+  background-color: #445162;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Родитель для текста и картинки, 
+  делим контент на 2 части в разные стороны */
+.hi-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 1я часть (С текстом) Родитель для Title & ul */
+.hi-body {
+  color: #fff;
+  padding: 0 30px 0 0;
+}
+.hi-title {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  font-size: calc(29px + 31 * ((100vw - 320px) / (1280 - 320)));
+  margin: 0 0 38px 0;
+}
+
+/* Стили для списков */
+.hi-list li {
+  background: url(./icons/check-icon.png) 0 1px no-repeat;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  line-height: 22px;
+  padding: 0 0 0 35px;
+  margin: 0 0 15px 0;
+}
+/* Убрать margin у последнего списка */
+.hi-list li:last-child {
+  margin: 0;
+}
+
+/* 2я часть (С картинкой) Родитель для <img> */
+.hi-image {
+  margin: 10px 0 20px 0;
+  height: 200px;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hi-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --------------------------------------------- */
+/* 'what' section */
+
+.what {
+  padding: 50px 0;
+}
+
+.what-row {
+  display: flex;
+}
+
+.title {
+  color: #445162;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.what-title {
+  margin: 0 0 33px 0;
+}
+
+/* .what-img {
+  flex: 0 0 430px;
+}
+.what-img img {
+  max-width: 100%;
+} */
+
+.what-img {
+  margin: 10px 0 20px 0;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  flex: 0 0 35%;
+  /* justify-content: flex-end; */
+}
+
+.what-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.what-body {
+  flex: 1 1 auto;
+  padding: 0px 0px 0px 38px;
+}
+
+.what-text {
+}
+
+.what-text p {
+  color: #333333;
+  margin: 0 0 25px 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+.what-text p:last-child {
+  margin: 0;
+}
+
+/* Columns */
+/* ````````````````````` */
+
+.columns {
+  background-color: #f5f5f5;
+  padding: 50px 0 20px 0;
+}
+
+.columns-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.columns-column {
+  padding: 0 8px;
+  flex: 0 1 50%; /* Запрещаю увеличеваться, Позволяю уменьшатся, размер 50%*/
+  margin: 0 0 30px 0;
+}
+
+.columns-title {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.item-row {
+  display: flex;
+}
+
+.item-img {
+  flex: 0 0 40%;
+  /* flex: 0 0 200px; */
+  margin: 10px 0 20px 0;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+}
+
+.item-img img {
+  /* flex: 0 0 200px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.item-body {
+  flex: 1 1 auto;
+  padding: 0 0 0 15px;
+}
+
+.item-title {
+  color: #445162;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 13px 0;
+}
+
+.item-text {
+  color: #333333;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* 'Vertical' section */
+/* ````````````````````` */
+
+.vertical {
+  padding: 50px 0;
+}
+
+.vertical-title {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.vertical-body {
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.vertical-row {
+  display: flex;
+  margin: 0 -22.5px;
+}
+
+.vertical-column {
+  flex: 0 1 33.333%; /* Делим на 3 части */
+  padding: 0 22.5px;
+  display: flex;
+}
+
+.vertical-item {
+  background-color: #445162;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #445162;
+  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-subtitle {
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 12px 0;
+  text-align: center;
+}
+.vertical-label {
+  text-align: center;
+  background-color: #fff;
+  color: #445162;
+  padding: 15px;
+  font-size: 40px;
+}
+
+.vertical-text {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  flex: 1 1 auto; /* Позволяет тексту увеличиватся (прижимает кнопку к низу) */
+}
+
+.vertical-text p {
+  margin: 0 0 15px 0;
+}
+
+.vertical-text p:last-child {
+  margin: 0;
+}
+
+.vertical-btn {
+  background-color: #fff;
+  display: block;
+  height: 40px;
+  margin: 0 20px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #445162;
+}
+
+/* Footer */
+/* ````````````````````` */
+.footer {
+  background-color: #f5f5f5;
+}
+.footer-row {
+  display: flex;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text {
+  color: #445162;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .columns-row {
+    flex-direction: column;
+  }
+
+  .vertical-row {
+    display: grid;
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .hi-list li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .what-text p {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .item-title {
+    font-size: 18px;
+  }
+
+  .item-text {
+    font-size: 14px;
+  }
+
+  .vertical-label {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hi-row {
+    flex-direction: column-reverse;
+  }
+
+  .hi-image {
+    width: 100%;
+  }
+
+  .what-row {
+    flex-direction: column;
+  }
+
+  .what-body {
+    padding: 0;
+  }
+
+  .item-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 330px) {
+  .container {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+
+  .hi-image {
+    margin: 10px 0 20px 0;
+    height: 200px;
+    width: 100%;
+  }
+}
